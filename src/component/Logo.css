@@ -1,0 +1,73 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282727; /* Background color similar to the book cover */
+  }
+  
+  .shape {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: transparent; /* Make the center transparent */
+    transform: rotate(45deg); /* Rotate to make it a diamond shape */
+    box-sizing: border-box;
+  }
+  
+  .shape::before,
+  .shape::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 20px solid transparent; /* Set transparent borders to inherit */
+    box-sizing: border-box;
+  }
+  
+  .shape::before {
+    border-top-color: #538135; /* Top border color */
+    border-left-color: #f4b084; /* Left border color */
+    border-bottom: 0; /* Remove bottom border */
+    border-right: 0; /* Remove right border */
+  }
+  
+  .shape::after {
+    border-bottom-color: #305496; /* Bottom border color */
+    border-right-color: #a8d08d; /* Right border color */
+    border-top: 0; /* Remove top border */
+    border-left: 0; /* Remove left border */
+  }
+  
+  .shape::before,
+  .shape::after {
+    border-top-width: 20px;
+    border-left-width: 20px;
+    border-bottom-width: 20px;
+    border-right-width: 20px;
+  }
+
+  
+  
+  .text {
+    position: absolute;
+    top: 6%;
+    left: 95%;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Center and rotate back the text */
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    width: 200px; /* Adjust width to fit inside the diamond */
+    margin-top: 92px;
+    
+  }
+  
+  .text .title {
+    font-size: 16px; 
+    font-weight: bold;
+  }
+  
+  .text .subtitle {
+    font-size: 12px;
+  }
+  
